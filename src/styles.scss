@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import 'bootstrap/scss/bootstrap';
+
+
+body{
+    font-family: "Quicksand", sans-serif !important;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.tag-container::-webkit-scrollbar {
+    display: none !important; /* Safari and Chrome */
+  }

@@ -1,0 +1,20 @@
+<section class="mt-5">
+    <div class="tabs mb-5">
+        <!-- <span class="scroll-btn scroll-left" (click)="scroll(-1)">&#9664;</span> -->
+        <span  *ngIf="showLeftButton" class="scroll-btn scroll-left" (click)="scroll(-1)"><i class="fa-solid fa-angle-left"></i></span>
+        <div class="tag-container" #tagContainer>
+          <div class="tag-item" *ngFor="let item of tags" (click)="fetchImages(start,size,item.tag)">{{item.tag | titlecase}}</div>
+        </div>
+        <!-- <span class="scroll-btn scroll-right" (click)="scroll(1)">&#9654;</span> -->
+        <span  *ngIf="showRightButton" class="scroll-btn scroll-right" (click)="scroll(1)"><i class="fa-solid fa-angle-right"></i></span>
+      </div>
+      
+    <div class="masonry">
+        <div class="item" *ngFor="let item of images">
+            <img [src]="item.url" alt="">
+        </div>
+      </div>
+      <div *ngIf="images.length == 0" class="text-center">
+        No data found!
+      </div>
+</section>
